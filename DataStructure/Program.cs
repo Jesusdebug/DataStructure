@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-Console.WriteLine("Exercise factural data structure!");
+Console.WriteLine("Exercise factorial data structure!");
 
 
 int f = 0;
