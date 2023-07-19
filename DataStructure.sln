@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure", "DataStructure\DataStructure.csproj", "{9A5EA782-6A74-429F-8136-83179A6647C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure", "DataStructure\DataStructure.csproj", "{9A5EA782-6A74-429F-8136-83179A6647C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms_Recursive", "Algorithms_Recursive", "{BDCCBCCA-8330-4391-9D2F-C383BDEEF757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive", "Recursive\Recursive.csproj", "{3D1B2477-0C5C-4308-8EDE-241A61FBB4D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{9A5EA782-6A74-429F-8136-83179A6647C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A5EA782-6A74-429F-8136-83179A6647C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A5EA782-6A74-429F-8136-83179A6647C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1B2477-0C5C-4308-8EDE-241A61FBB4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1B2477-0C5C-4308-8EDE-241A61FBB4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1B2477-0C5C-4308-8EDE-241A61FBB4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1B2477-0C5C-4308-8EDE-241A61FBB4D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D1B2477-0C5C-4308-8EDE-241A61FBB4D5} = {BDCCBCCA-8330-4391-9D2F-C383BDEEF757}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {487B4271-AD11-439C-860E-AE0E7206BDD1}
