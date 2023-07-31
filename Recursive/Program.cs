@@ -25,16 +25,26 @@ The Factorial is to multiplying the value passed by all precede the it until rea
 			1!=1 (we get answer)
  */
 
-Console.WriteLine("Hello, World!");
-Console.WriteLine("welcome to factorial!");
+using Recursive;
+
+//Console.WriteLine("Hello, World!");
+//Console.WriteLine("welcome to factorial!");
 
 int f = 0;
-f = Factorial(4);
+//f = Factorial(4);
+Console.WriteLine("Hello, World!");
+Console.WriteLine("welcome to Fibonacci!");
+f = Fibonacci.fib(6);
 Console.WriteLine(f);
+
+//-------------------------------------------------------
 static int Factorial(int n) {
 	int r = 0;
 	//caso inductivo
-	if(n>1) r = n*Factorial(n-1);
+	if (n > 1) {
+		r = n * Factorial(n - 1);
+		Console.WriteLine("n*n-1 " + n  *  (n-1)+" iterado");
+    }
 	//caso base
 	if(n==1) r=1;
 	return r;
