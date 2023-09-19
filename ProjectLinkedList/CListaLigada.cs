@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,23 +54,65 @@ namespace ProjectLinkedList
         al cual le asignamos el valor, lo conectamos a una referecia null, y conectamos el nodo anterior a el 
         nuevo nodo
          */
-        public void Adicionar(int PDato) {
-        
+        public void Adicionar(int PDato)
+        {
+
             //inicializamos trabajo
-            trabajo=ancla;
+            trabajo = ancla;
             //iteramos hasta llegar el ultimo nodo
-            while (trabajo.Siguiente != null) { 
-            
-                trabajo=trabajo.Siguiente;
+            while (trabajo.Siguiente != null)
+            {
+
+                trabajo = trabajo.Siguiente;
             }
             //creamos un nodo temporal 
-            CNODO nodoTemporal= new CNODO();
+            CNODO nodoTemporal = new CNODO();
             //asignamos un valor al nodo temporal
             nodoTemporal.Dato = PDato;
             //creamos una referencia a null, esto indica que este es el nuevo ultimo nodo
             nodoTemporal.Siguiente = null;
             //conectamos el nodo a la estrucutra
-            trabajo.Siguiente= nodoTemporal;
+            trabajo.Siguiente = nodoTemporal;
+        }
+        /*vacial lista
+            gracias al recolector de basura nosotros podemo desconectar la lista del ancla y
+            ya el recolector realiza el proceso de borrado de los elementos de la estructura.
+         */
+        public void Vaciar()
+        {
+            ancla.Siguiente = null;
+        }
+
+        /*validar si una lista esta vacia*/
+        public bool EstaVacio()
+        {
+
+            if (ancla.Siguiente == null) { return true; }
+            return false;
+        }
+        /*buscar un elemento*/
+        /*nos apoyamos de la propiedad trabajo2 mediante el ciclo while iremos 
+         nodo a nodo preguntando por el dato que buscamos mediante la centencia if
+        si no lo encontramos retornamos null
+        */
+        public CNODO Buscar(int Pdato)
+        {
+           // validar que no este vacia la estructura
+            if (EstaVacio() == true) return null;
+            //pasar la estrucutura a trabajo2
+            trabajo2 = ancla;
+            while (trabajo2.Siguiente != null)
+            {
+                //asignar la información de trabajo siguiente para validar sus valor 
+                trabajo2=trabajo2.Siguiente;
+                if (trabajo2.dato==Pdato)
+                {
+                    return trabajo2; 
+                }
+            }
+            return null;
+
+
         }
     }
 }
